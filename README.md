@@ -4,13 +4,13 @@ Changesets is a tool for managing versioning and changelogs with a focus on agno
 
 ## Guiding Principles
 
-- **Agnostic** - Changesets should work with any repository structure or project type.
-- **Simple** - Changesets should be easy to create and understand.
-- **Flexible** - Changesets should be flexible enough to work with any workflow.
+- **Agnostic**: Changesets should work with any repository structure or project type.
+- **Simple**: Changesets should be easy to create and understand.
+- **Flexible**: Changesets should be flexible enough to work with any workflow.
 
 ## Data Model
 
-Each changeset is stored in a [YAML](https://yaml.org/) file in the `.changesets` directory. The name of the file is used to identify the changeset, and the contents of the file are used to generate the changelog. The name of the file is a randomly generated string, and is not meant to be human-readable. The contents of the file are a [YAML](https://yaml.org/) document with the following structure:
+Each changeset is stored in a [YAML](https://yaml.org/) file in the `.changesets` directory. The file's name is used to identify the changeset, and the contents of the file are used to generate the changelog. The file's name is a randomly generated string and is not meant to be human-readable. The file's contents are a [YAML](https://yaml.org/) document with the following structure:
 
 ```yaml
 packageName: "laravel-lighty"
@@ -18,9 +18,9 @@ versionBump: patch
 description: "FIXED: compatibility with laravel 10"
 ```
 
-- The **packageName** is the name of the package that is being changed. This is used to group changesets together in the changelog.
-- The **versionBump** is the type of version bump that should be applied to the package. This can be one of `major`, `minor` or `patch` according to [Semantic Versioning](https://semver.org/) and is used to generate the version number.
-- The **description** is a human-readable description of the changeset. This is used to generate the changelog.
+- The **packageName** refers to the name of the package undergoing modification. It groups changesets together in the changelog.
+- The **versionBump** specifies the type of version bump to be applied to the package. It can be either `major`, `minor`, or `patch` as per [Semantic Versioning](https://semver.org/) guidelines, and aids in generating the version number.
+- The **description** provides a human-readable explanation of the changeset, facilitating the generation of the changelog.
 
 ## Format
 
